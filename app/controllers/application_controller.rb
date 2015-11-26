@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def inicio
-    render text: "Alô!"
+    #render text: "Alô!"
   end
 end
