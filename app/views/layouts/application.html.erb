@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= csrf_meta_tags %>
+    <title><%= full_title(yield(:title))%></title>
+    <%=stylesheet_link_tag 'application', media: 'all'%>
+    <%=javascript_include_tag 'application'%>
+    <%=csrf_meta_tags%>
     <link href="/assets/bootstrap.min.css" rel="stylesheet" />
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
-  </head>
+    <%=render 'layouts/shim'%>
+      
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "sample app", '#', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%=link_to "Home", '/static_pages/home'%></li>
-            <li><%=link_to "Help", '/static_pages/help'%></li>
-            <li><%=link_to "Log in", '#'%></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%=render 'layouts/header'%>
+
     <div style="margin-left: auto; width: 800px; height: 80px;">&nbsp;</div>
     <div class="container">
-      <%= yield %>
+      <%=yield%>
     </div>
+    <%=render 'layouts/footer'%>
+      
   </body>
 <!--
 </html>
