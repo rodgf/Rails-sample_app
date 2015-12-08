@@ -13,10 +13,14 @@
 
     <div style="margin-left: auto; width: 800px; height: 80px;">&nbsp;</div>
     <div class="container">
-      <%=yield%>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+			<%=yield%>
     </div>
     <%=render 'layouts/footer'%>
-      
+    <br /><br /><br />
+    <%=debug(params) if Rails.env.development?%>      
   </body>
 <!--
 </html>
