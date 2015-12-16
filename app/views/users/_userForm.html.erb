@@ -1,0 +1,42 @@
+				<table class="tabelaForm">
+					<tr>
+						<td class="rotuloForm">
+							<%=f.label :name %>
+						</td>
+					</tr>
+					<tr>
+						<td class="campo">
+							<%=f.text_field :name, class: "form-control"%>
+						</td>
+					</tr>
+					<tr>
+						<td class="rotuloForm">
+							<%=f.label :email%>
+						</td>
+					</tr>
+					<tr>
+						<td class="campo">
+							<%=f.email_field :email, class: "form-control"%>
+						</td>
+					</tr>
+					<tr>
+						<td class="rotuloForm">
+							<%=f.label :password%>
+						</td>
+					</tr>
+					<tr>
+						<td class="campo">
+							<%=f.password_field :password, class: "form-control"%>
+						</td>
+					</tr>
+					<tr>
+						<td class="rotuloForm">
+							<%=f.label :password_confirmation, "Confirmation"%>
+						</td>
+					</tr>
+					<tr>
+						<td class="campo">
+							<%=f.password_field :password_confirmation, class: "form-control"%>
+						</td>
+					</tr>
+				</table>
