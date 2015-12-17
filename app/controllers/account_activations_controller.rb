@@ -1,5 +1,6 @@
 class AccountActivationsController < ApplicationController
 
+	# Recebe e valida o token enviado por e-mail ao usuário
   def edit
     user = User.find_by(email: params[:email])
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
